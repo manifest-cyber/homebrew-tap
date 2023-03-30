@@ -5,12 +5,12 @@
 class Manifest < Formula
   desc "a toolkit for sbom generation, merge and publish to the Manifest platform"
   homepage "https://github.com/manifest-cyber/cli"
-  version "0.5.0"
+  version "0.6.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/manifest-cyber/cli/releases/download/v0.5.0/manifest_darwin_x86_64.tar.gz"
-      sha256 "7c298c19cb063db8626dd2131466351fa5965ff40089ac8e9c8036f36744bc40"
+      url "https://github.com/manifest-cyber/cli/releases/download/v0.6.0/manifest_darwin_x86_64.tar.gz"
+      sha256 "57e589d6994fe5c61ef59d9d6f04022730a2629ff6c34d343b94796ee82ad0c0"
 
       def install
         bin.install "manifest"
@@ -21,8 +21,8 @@ class Manifest < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/manifest-cyber/cli/releases/download/v0.5.0/manifest_darwin_arm64.tar.gz"
-      sha256 "82b4507291916ccf496472fc49d1a152bd9b597e7639367105877456a10d4883"
+      url "https://github.com/manifest-cyber/cli/releases/download/v0.6.0/manifest_darwin_arm64.tar.gz"
+      sha256 "f425252e7c46ca0b3f93bf6ee536ef7e504a0e0baa4c4886fe18b50c63e1dff3"
 
       def install
         bin.install "manifest"
@@ -35,9 +35,9 @@ class Manifest < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/manifest-cyber/cli/releases/download/v0.5.0/manifest_linux_x86_64.tar.gz"
-      sha256 "6ba06fa9ece86e7634cf8e4e5c982b0e2f617c85cbdf79a5e5b9a9c1a6dc0be4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/manifest-cyber/cli/releases/download/v0.6.0/manifest_linux_arm64.tar.gz"
+      sha256 "31ae2e84a6d2115b4b32497530d359bddcc02ece740a8adb3eea9f85489a3cba"
 
       def install
         bin.install "manifest"
@@ -47,9 +47,9 @@ class Manifest < Formula
         man1.install "manpages/manifest.1.gz"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/manifest-cyber/cli/releases/download/v0.5.0/manifest_linux_arm64.tar.gz"
-      sha256 "01164bd6faf779c9d91e51257605706f2966d423e2da688911fc13e9ab3c85cd"
+    if Hardware::CPU.intel?
+      url "https://github.com/manifest-cyber/cli/releases/download/v0.6.0/manifest_linux_x86_64.tar.gz"
+      sha256 "9c1ba727311fd1b4a830f293c02a6f7601d2ba78f488496359968eeac696c73c"
 
       def install
         bin.install "manifest"
