@@ -5,13 +5,13 @@
 class AiBom < Formula
   desc "A tool to generate AIBOMs from HuggingFace models."
   homepage "https://github.com/manifest-cyber/ai-bom"
-  version "0.0.1-beta.0"
+  version "0.0.1-beta.1"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/manifest-cyber/ai-bom/releases/download/v0.0.1-beta.0/ai-bom_darwin_arm64.tar.gz"
-      sha256 "cf496bf9790c7fe5bfa7591ee370ce274ca6a7973bc1c3f2e5af2b0df9c4a09f"
+    if Hardware::CPU.intel?
+      url "https://github.com/manifest-cyber/ai-bom/releases/download/v0.0.1-beta.1/ai-bom_darwin_amd64.tar.gz"
+      sha256 "c9267df9b60dc00dbfccb993be830f5224a94a4c6e90aaa80d16124167c754d9"
 
       def install
         bin.install "ai-bom"
@@ -21,9 +21,9 @@ class AiBom < Formula
         man1.install "manpages/ai-bom.1.gz"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/manifest-cyber/ai-bom/releases/download/v0.0.1-beta.0/ai-bom_darwin_amd64.tar.gz"
-      sha256 "a1c39268e57d7dfdd5388276454e0224e396e723b642c9311a0c6f50259cc843"
+    if Hardware::CPU.arm?
+      url "https://github.com/manifest-cyber/ai-bom/releases/download/v0.0.1-beta.1/ai-bom_darwin_arm64.tar.gz"
+      sha256 "ffbc449d20ebbb9ec747f6304023ec44c43dde28c170ec231cfbd317b6cb45f3"
 
       def install
         bin.install "ai-bom"
@@ -37,20 +37,8 @@ class AiBom < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/manifest-cyber/ai-bom/releases/download/v0.0.1-beta.0/ai-bom_linux_armv7.tar.gz"
-      sha256 "25334a1ffbc90f70d4bfb32e105d6fe4b612299fe131694784b1829a83411ce6"
-
-      def install
-        bin.install "ai-bom"
-        bash_completion.install "completions/ai-bom.bash" => "ai-bom"
-        zsh_completion.install "completions/ai-bom.zsh" => "_ai-bom"
-        fish_completion.install "completions/ai-bom.fish"
-        man1.install "manpages/ai-bom.1.gz"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/manifest-cyber/ai-bom/releases/download/v0.0.1-beta.0/ai-bom_linux_amd64.tar.gz"
-      sha256 "4865be4066beaa10703e48a7883ab4b97dc06b2d52e57855db03ff7deafd2ee5"
+      url "https://github.com/manifest-cyber/ai-bom/releases/download/v0.0.1-beta.1/ai-bom_linux_armv7.tar.gz"
+      sha256 "9d4ecf23e4863d61801138757fd7b369dab1f480499e11361522283925c6aa53"
 
       def install
         bin.install "ai-bom"
@@ -61,8 +49,20 @@ class AiBom < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/manifest-cyber/ai-bom/releases/download/v0.0.1-beta.0/ai-bom_linux_arm64.tar.gz"
-      sha256 "d723b9b795c06bfb7958782e27a601c3fcb81046a65a123a50e77400448c1870"
+      url "https://github.com/manifest-cyber/ai-bom/releases/download/v0.0.1-beta.1/ai-bom_linux_arm64.tar.gz"
+      sha256 "244fd05d55b815a04b5b3c93ecdc84346f6e4437128b27e0a500c6f15f3397db"
+
+      def install
+        bin.install "ai-bom"
+        bash_completion.install "completions/ai-bom.bash" => "ai-bom"
+        zsh_completion.install "completions/ai-bom.zsh" => "_ai-bom"
+        fish_completion.install "completions/ai-bom.fish"
+        man1.install "manpages/ai-bom.1.gz"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/manifest-cyber/ai-bom/releases/download/v0.0.1-beta.1/ai-bom_linux_amd64.tar.gz"
+      sha256 "d8b9eacbb502383e1d3ab87dd487543e31773c6a50e3ffd6a888e3439068c097"
 
       def install
         bin.install "ai-bom"
