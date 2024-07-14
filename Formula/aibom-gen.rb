@@ -11,7 +11,7 @@ class AibomGen < Formula
   on_macos do
     on_intel do
       url "https://github.com/manifest-cyber/aibom-gen/releases/download/v0.0.1-alpha.0/aibom-gen_darwin_x86_64.tar.gz"
-      sha256 "e0f5983a3caa8bbdc4490b8d75da73ebd49b000b56a22b6f9c955cb3dfef963b"
+      sha256 "d4c2a3d00b68b3dee7b7abf2f50ad2bdf8c61d19200f6fad3d36152817827f06"
 
       def install
         bin.install "aibom-gen"
@@ -23,7 +23,7 @@ class AibomGen < Formula
     end
     on_arm do
       url "https://github.com/manifest-cyber/aibom-gen/releases/download/v0.0.1-alpha.0/aibom-gen_darwin_arm64.tar.gz"
-      sha256 "1da971fd53c438a7bbfb2a6a5bcd0aefbe92ef12dee4878bdf2141c71f0fdc76"
+      sha256 "9ae50ee38cdda8a114cbceaa2bcf970c9e6c42ce824cef7cf75f9dbd0ef1bdc9"
 
       def install
         bin.install "aibom-gen"
@@ -39,7 +39,7 @@ class AibomGen < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/manifest-cyber/aibom-gen/releases/download/v0.0.1-alpha.0/aibom-gen_linux_x86_64.tar.gz"
-        sha256 "2dc17a503b8282b9646b32b8c4cf45081f1170e7b963b9669d1cc9193c2cab5a"
+        sha256 "7c913664ee72ce5f1a7bc595fb5d0ecb67328c91f1bf8d913916c07cb8bcae85"
 
         def install
           bin.install "aibom-gen"
@@ -53,7 +53,7 @@ class AibomGen < Formula
     on_arm do
       if !Hardware::CPU.is_64_bit?
         url "https://github.com/manifest-cyber/aibom-gen/releases/download/v0.0.1-alpha.0/aibom-gen_linux_armv7.tar.gz"
-        sha256 "d23472e907a5bb98d2c53adb51a0f8a247f12a8547d3e4e746cecc3a993e689c"
+        sha256 "5b39e87a834117b08aa91768cf0a356386f888adeed372384b0c126908828741"
 
         def install
           bin.install "aibom-gen"
@@ -67,7 +67,7 @@ class AibomGen < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/manifest-cyber/aibom-gen/releases/download/v0.0.1-alpha.0/aibom-gen_linux_arm64.tar.gz"
-        sha256 "b87f1d3ab04d00f9c3faa9be4a451dfb9d55b7ef4b8691ec81163aad7e0f280a"
+        sha256 "93b986b07ab5f737a7f9bdf0b4f74a9197d1e2befc1b230f06135dbfb8f9571f"
 
         def install
           bin.install "aibom-gen"
