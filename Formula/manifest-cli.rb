@@ -11,7 +11,7 @@ class ManifestCli < Formula
   on_macos do
     on_intel do
       url "https://github.com/manifest-cyber/cli/releases/download/v0.16.0/manifest-cli_darwin_x86_64.tar.gz"
-      sha256 "8f3906ac49eefbe6751d7287173531a197be4d0cf8012349384ef09a486addcc"
+      sha256 "287bb655319b555105106bfbd8f6b5b8628c588840ff44edc3888aa1e36d91a5"
 
       def install
         bin.install "manifest-cli"
@@ -23,7 +23,7 @@ class ManifestCli < Formula
     end
     on_arm do
       url "https://github.com/manifest-cyber/cli/releases/download/v0.16.0/manifest-cli_darwin_arm64.tar.gz"
-      sha256 "823acf6b9bf495400d21fe90ceb956f9c4060c4dc1a1e15697a423874f9ff4f1"
+      sha256 "3f136d3791ab226fa0d9653c15c71676faa3809e49fe3b54c5cf3f61a428453c"
 
       def install
         bin.install "manifest-cli"
@@ -39,7 +39,7 @@ class ManifestCli < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/manifest-cyber/cli/releases/download/v0.16.0/manifest-cli_linux_x86_64.tar.gz"
-        sha256 "d6a66c0e7233049a63253e322131b4369b309506f2da1fca600e53a1aa4eab0b"
+        sha256 "0b76d4ec23b23786ccda567eca400db8c73163340e8019a22c0e8a3f04f77f2f"
 
         def install
           bin.install "manifest-cli"
@@ -53,7 +53,7 @@ class ManifestCli < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/manifest-cyber/cli/releases/download/v0.16.0/manifest-cli_linux_arm64.tar.gz"
-        sha256 "14821eb6a0f2814988a2f76a6b1cc5f1da759bf4a8f087e4fa786564f3ece812"
+        sha256 "050e90d62e7ed6b5a1c610d8516956d680a514b690324b61a3c4d1d9fce78686"
 
         def install
           bin.install "manifest-cli"
