@@ -5,13 +5,13 @@
 class ManifestCli < Formula
   desc "a toolkit for sbom generation, merge and publish to the Manifest platform"
   homepage "https://github.com/manifest-cyber/cli"
-  version "0.18.8"
+  version "0.19.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/manifest-cyber/cli/releases/download/v0.18.8/manifest-cli_darwin_x86_64.tar.gz"
-      sha256 "a514e8b3eb509f20bfa9dfd09fab1e947e3e4409864dc68f6136e426b5ebe21c"
+      url "https://github.com/manifest-cyber/cli/releases/download/v0.19.0/manifest-cli_darwin_x86_64.tar.gz"
+      sha256 "424175cb25344c256dd41feb0adf4fdc99b47b76402f72b6b8a73ce338ecbfa7"
 
       def install
         bin.install "manifest-cli"
@@ -22,8 +22,8 @@ class ManifestCli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/manifest-cyber/cli/releases/download/v0.18.8/manifest-cli_darwin_arm64.tar.gz"
-      sha256 "4b7ece82f5f34791afc3f1e18722a0fd76bae039945a356b330e177723c84bea"
+      url "https://github.com/manifest-cyber/cli/releases/download/v0.19.0/manifest-cli_darwin_arm64.tar.gz"
+      sha256 "66af4f22f3f11839e48e047fc1c4738358a0cabe352259606de6292445435941"
 
       def install
         bin.install "manifest-cli"
@@ -38,8 +38,8 @@ class ManifestCli < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/manifest-cyber/cli/releases/download/v0.18.8/manifest-cli_linux_x86_64.tar.gz"
-        sha256 "5996538864399ec51ee907e35a223d0142811a47d9fb390342d21ad86d01e3db"
+        url "https://github.com/manifest-cyber/cli/releases/download/v0.19.0/manifest-cli_linux_x86_64.tar.gz"
+        sha256 "9e0ee743650f559d5e524c121230f3dd0da12f9c4d65c351b780cfb9640f63cd"
 
         def install
           bin.install "manifest-cli"
@@ -52,8 +52,8 @@ class ManifestCli < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/manifest-cyber/cli/releases/download/v0.18.8/manifest-cli_linux_arm64.tar.gz"
-        sha256 "c85af315d3cce71bbc9053b644b71ab902035adeb789f26301f326ee0333681d"
+        url "https://github.com/manifest-cyber/cli/releases/download/v0.19.0/manifest-cli_linux_arm64.tar.gz"
+        sha256 "4274b6817143f26ac82895adcadbf6db4e54e9a4ab351001fc9cfc67f74f3cc1"
 
         def install
           bin.install "manifest-cli"
