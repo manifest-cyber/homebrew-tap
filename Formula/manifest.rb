@@ -10,8 +10,8 @@ class Manifest < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/manifest-cyber/cli/releases/download/v0.12.6/manifest_darwin_x86_64.tar.gz"
-      sha256 "c678844ef4491d9e20dda8cf079368e01d0154ae81bbe567f105c2b444d2f3a8"
+      url "https://github.com/manifest-cyber/cli/archive/refs/tags/v0.36.1.tar.gz"
+      sha256 "5e7d998b21aa7f3f70f8f57d93e48a05afa6744b4614bbea9922a5ec91b5d665"
 
       def install
         bin.install "manifest"
