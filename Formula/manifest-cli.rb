@@ -5,13 +5,13 @@
 class ManifestCli < Formula
   desc "a toolkit for sbom generation, merge and publish to the Manifest platform"
   homepage "https://github.com/manifest-cyber/cli"
-  version "0.36.2"
+  version "0.37.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/manifest-cyber/cli/releases/download/v0.36.2/manifest-cli_darwin_arm64.tar.gz"
-      sha256 "e3edd3760183e2c0dde549df79e684d65ad0194ce2f775c815d71a607a218174"
+      url "https://github.com/manifest-cyber/cli/releases/download/v0.37.0/manifest-cli_darwin_arm64.tar.gz"
+      sha256 "bed6fd1422ac8f3d4c4bf2ddb1a280a1392e7e260b2d08fde2d603a013936551"
 
       define_method(:install) do
         bin.install "manifest-cli"
@@ -25,8 +25,8 @@ class ManifestCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/manifest-cyber/cli/releases/download/v0.36.2/manifest-cli_linux_x86_64.tar.gz"
-      sha256 "afc7dbd254aedb35ee4233033460ee9c3151e6f662c0648683e4f2dfa807cf6b"
+      url "https://github.com/manifest-cyber/cli/releases/download/v0.37.0/manifest-cli_linux_x86_64.tar.gz"
+      sha256 "b2d0084e5aeed777efd92c31ca399198710f709ad193a0b652e73633d5d55435"
       define_method(:install) do
         bin.install "manifest-cli"
         bash_completion.install "completions/manifest-cli.bash" => "manifest-cli"
@@ -36,8 +36,8 @@ class ManifestCli < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/manifest-cyber/cli/releases/download/v0.36.2/manifest-cli_linux_arm64.tar.gz"
-      sha256 "15e17a7bafa363aac6686f14d5680dd5fe5f88b4f5b580a2edfa21a4224bf5cc"
+      url "https://github.com/manifest-cyber/cli/releases/download/v0.37.0/manifest-cli_linux_arm64.tar.gz"
+      sha256 "965e5c91a812949264fb3e4a67772dda2ca47e3e6ed824c7de2d2882680678a4"
       define_method(:install) do
         bin.install "manifest-cli"
         bash_completion.install "completions/manifest-cli.bash" => "manifest-cli"
