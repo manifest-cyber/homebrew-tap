@@ -5,13 +5,13 @@
 class AibomGen < Formula
   desc "A tool to generate AIBOMs from AI models."
   homepage "https://github.com/manifest-cyber/aibom-gen"
-  version "0.0.3"
+  version "0.0.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/manifest-cyber/aibom-gen/releases/download/v0.0.3/aibom-gen_darwin_x86_64.tar.gz"
-      sha256 "1b11edf52468cdbec9d2bbb082feb674053d142ce96f0d83a04168699d655c13"
+      url "https://github.com/manifest-cyber/aibom-gen/releases/download/v0.0.4/aibom-gen_darwin_x86_64.tar.gz"
+      sha256 "10bc37c66fe3443fd0e2abae08e4b556330835ba48f1e5cd7f65f1bfa6a74925"
 
       define_method(:install) do
         bin.install "aibom-gen"
@@ -22,8 +22,8 @@ class AibomGen < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/manifest-cyber/aibom-gen/releases/download/v0.0.3/aibom-gen_darwin_arm64.tar.gz"
-      sha256 "32c6c58557e86c763f08d5c0d515d1e795b68b2963ce7db3d844abd730b27831"
+      url "https://github.com/manifest-cyber/aibom-gen/releases/download/v0.0.4/aibom-gen_darwin_arm64.tar.gz"
+      sha256 "69b2fc1adbce8709fc2d9eaca36e3953988197be16c7a1e72c4e002747190e8d"
 
       define_method(:install) do
         bin.install "aibom-gen"
@@ -37,8 +37,8 @@ class AibomGen < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/manifest-cyber/aibom-gen/releases/download/v0.0.3/aibom-gen_linux_x86_64.tar.gz"
-      sha256 "0f1dd339938f3badcaafe9716e1c3745cf8f9c5fb3198c3b3b0ddab624f880fc"
+      url "https://github.com/manifest-cyber/aibom-gen/releases/download/v0.0.4/aibom-gen_linux_x86_64.tar.gz"
+      sha256 "4199379b481998595473a56d7fd328be2d330c5e698a61adb5b53d8a8c7cfb05"
       define_method(:install) do
         bin.install "aibom-gen"
         bash_completion.install "completions/aibom-gen.bash" => "aibom-gen"
@@ -48,8 +48,8 @@ class AibomGen < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/manifest-cyber/aibom-gen/releases/download/v0.0.3/aibom-gen_linux_armv7.tar.gz"
-      sha256 "3381e282547f9841b28135e45bc1780433d38cb0abbf895e693877106f96a579"
+      url "https://github.com/manifest-cyber/aibom-gen/releases/download/v0.0.4/aibom-gen_linux_armv7.tar.gz"
+      sha256 "f106d957c66edc44b7ffd6f4ce7426d8689f6c14ff1d184aeb337d979a0bc4d2"
       define_method(:install) do
         bin.install "aibom-gen"
         bash_completion.install "completions/aibom-gen.bash" => "aibom-gen"
@@ -59,8 +59,8 @@ class AibomGen < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/manifest-cyber/aibom-gen/releases/download/v0.0.3/aibom-gen_linux_arm64.tar.gz"
-      sha256 "34a313b07852e135303bf57c36b67757d83630e46bafb91b9839c9dd6afc00f0"
+      url "https://github.com/manifest-cyber/aibom-gen/releases/download/v0.0.4/aibom-gen_linux_arm64.tar.gz"
+      sha256 "71eac714e44970b920e88380d1cd200a56dca07bb5f80afb97926ceac34ea1eb"
       define_method(:install) do
         bin.install "aibom-gen"
         bash_completion.install "completions/aibom-gen.bash" => "aibom-gen"
